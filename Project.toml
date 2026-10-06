@@ -1,0 +1,12 @@
+name = "Farm"
+uuid = "3dc095c0-9e88-42e8-a414-458d3ff6b0a0"
+version = "0.1.0"
+authors = ["romain "]
+
+[deps]
+Gurobi = "2e9cd046-0924-5485-92f1-d5272153d98b"
+JuMP = "4076af6c-e467-56ae-b986-b466b2749572"
+
+[compat]
+Gurobi = "1.9.3"
+JuMP = "1.31.2"

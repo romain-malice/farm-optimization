@@ -1,0 +1,10 @@
+parameter,value,unit,description
+reservoir_capacity,13000.0,m3,Usable volume of the farm reservoir
+reservoir_initial,9000.0,m3,Level at the beginning of period P1 of year 1
+reservoir_terminal,10000.0,m3,Required level at the end of the last period of the horizon
+abstraction_licence,10000.0,m3,Maximum volume pumped per year
+pumping_cost,0.09,EUR/m3,Energy and levy paid per cubic metre pumped
+non_productive_share,0.04,-,Minimum share of the farm left non-productive
+legume_share,0.1,-,Minimum share of the farm under a legume (Part C)
+horizon,3.0,years,Length of the rotation horizon (Part C)
+discount_rate,0.03,-,Annual discount rate used in Part C

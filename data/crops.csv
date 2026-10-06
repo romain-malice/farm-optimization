@@ -1,0 +1,8 @@
+crop,group,variable_cost_EUR_per_ha,max_farm_share,return_share,is_legume,is_non_productive
+winter_wheat,cereal,980.0,0.4,0.9,0,0
+winter_barley,cereal,900.0,0.4,0.8,0,0
+grain_maize,cereal,1250.0,0.4,0.75,0,0
+sugar_beet,root,1750.0,0.4,0.65,0,0
+potato,root,3400.0,0.4,0.5,0,0
+field_beans,legume,780.0,0.4,0.4,1,0
+cover_fallow,cover,90.0,1.0,2.0,0,1

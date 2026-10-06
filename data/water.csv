@@ -1,0 +1,5 @@
+period,reservoir_inflow_m3,pumping_cap_m3
+P1_spring,5500.0,5000.0
+P2_early_summer,2000.0,5000.0
+P3_late_summer,1200.0,5000.0
+P4_autumn,9000.0,5000.0

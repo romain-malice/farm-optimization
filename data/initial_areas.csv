@@ -1,0 +1,14 @@
+block,crop,area_ha
+B1,potato,6.0
+B1,winter_wheat,11.0
+B1,sugar_beet,6.0
+B1,winter_barley,3.0
+B2,sugar_beet,8.0
+B2,winter_wheat,10.0
+B2,winter_barley,4.0
+B3,winter_wheat,6.0
+B3,winter_barley,6.0
+B3,grain_maize,6.0
+B4,winter_wheat,4.0
+B4,winter_barley,5.0
+B4,field_beans,5.0

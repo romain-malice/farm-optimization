@@ -1,0 +1,7 @@
+crop,price_EUR_per_t,contract_min_t,contract_max_t,spot_price_EUR_per_t
+winter_wheat,210.0,,,
+winter_barley,195.0,,,
+grain_maize,195.0,,,
+sugar_beet,38.0,900.0,1700.0,22.0
+potato,160.0,,700.0,92.0
+field_beans,290.0,,,
