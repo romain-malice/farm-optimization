@@ -1,3 +1,5 @@
 # Only watch tex files
 report/*
 !report/*.tex
+
+output
