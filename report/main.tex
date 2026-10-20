@@ -1,54 +1,26 @@
-%\documentclass[article, math]{bmc}
+% \documentclass[article, math]{bmc}
 \documentclass{article}
 
 \usepackage{amsmath, amssymb}
 \usepackage[margin=2cm]{geometry}
 \usepackage{marvosym}
+\usepackage{graphicx}
+\usepackage{svg}
+\svgpath{figures/}
+
+\usepackage{tikz}
 
 \title{Farm Optimization}
-%\subtitle{Project Report} % From BMC
+% \subtitle{Project Report} % From BMC
 \author{Giuseppe Carrano, Romain Malice}
 
 \begin{document}
 
 \maketitle{}
 
-\section{The Coming Year}
-\label{sec:a}
+\include{a}
 
-\subsection{Problem Formulation}
-\label{sec:a1}
 
-Let us define useful sets for solving this problem.
-\begin{description}
-    \item[Soil Types] \(\mathcal{S} = \big\{ \text{deep loam}, \text{silt loam},
-        \text{sandy loam}, \text{heavy clay} \big\}\).
-    \item[Block Types] \(\mathcal{B} = \left\{ B_i | 0 < i \leq N \right\}\),
-        with \(N=4\) for this problem. To each block \(b \in \mathcal{B}\) is
-        associated a soil type \(s_b \in \mathcal{S}\) and an area $a_{b} \in \mathbb{R}^+$.
-
-      \item[Crop Types]
-        \(\mathcal{C} = \big\{ \text{winter wheat}, \text{winter barley}, \text{grain
-          maize}, \text{sugar beet}, \text{potato}, \text{field beans}, \text{cover
-          fallow} \big\}\).
-      \item[Periods] $\mathcal{P} = \left\{ \text{spring}, \text{early summer}, \text{late summer}, \text{autumn} \right\}$.
-      \end{description}
-      From these, we define the vectors
-      \begin{itemize}
-      \item $s_{c,b} \in \mathbb{R^+}^{|\mathcal{C}| \times |\mathcal{B}|}, (c, b) \in \mathcal{C} \times \mathcal{B}$ is the share of crop $c$ in block $b$, in ha;
-      \item $p_c \in \mathbb{R^+}^{|\mathcal{C}|}, c \in \mathcal{C}$ is the selling price of crop $c$ in \EUR/ton;
-      \item $M_c \in \mathbb{R^+}^{|\mathcal{C}|}, c \in \mathcal{C}$ is the maximum total share of each crop;
-      \item $m \in \mathbb{R^+}$ is the minimum share of non productive area
-      \end{itemize}
-
-      Then, the problem can be stated as
-      \begin{align}
-        \label{eq:1}
-        \min \quad & \left( \sum_{b \in \mathcal{B}} y_{c,b} \right) p^c - \left( \sum_{b \in \mathcal{B}} s_{c,b} \right) b^c - t_p w^p - v_p u^p, & \\
-        \text{s.t.} \quad & \sum_{c \in \mathcal{C}} s_{c,b} \leq a_b & \forall b \in \mathcal{B},\\
-                   & \sum_{b \in \mathcal{B}} s_{c,b} \leq M_c & \forall c \in \mathcal{C},\\
-                   & \sum_{b \in \mathcal{B}} s_{\text{cover fallow},b} \geq m,\\
-      \end{align}
 
 \end{document}
 
