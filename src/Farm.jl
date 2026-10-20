@@ -110,27 +110,6 @@ spot_price_EUR_per_t = df_get_elmt(markets_df, "sugar_beet", "crop", "spot_price
     yield_contract_t * price_EUR_per_t + yield_surplus_t * spot_price_EUR_per_t
 )
 
-# Contract solution using binary variable
-#= # Indicator
-# 1: nothing, 2: contract price, 3: more than contract price
-@variable(model, i_sb[1:3], Bin)
-@constraint(model, sum(i_sb) == 1)
-
-# yield <= contract_min
-@constraint(model, i_sb[1] --> {yield_t["sugar_beet"] <= contract_min_t})
-
-# contract_min <= yield <= contract_max
-@constraint(model, i_sb[2] --> {yield_t["sugar_beet"] >= contract_min_t})
-@constraint(model, i_sb[2] --> {yield_t["sugar_beet"] <= contract_max_t})
-
-# yield >= contract_max 
-@constraint(model, i_sb[3] --> {yield_t["sugar_beet"] >= contract_max_t})
-
-@expression(model, benefits_sb_EUR,
-    i_sb[2] * yield_t["sugar_beet"] * price_EUR_per_t +
-        i_sb[3] * ((yield_t["sugar_beet"] - contract_max_t) * spot_price_EUR_per_t +
-        contract_max_t * price_EUR_per_t)) =#
-
 # Total benefits
 
 commercial_crops_set = [c for c in crops_set if c != "cover_fallow"]
